@@ -1,0 +1,25 @@
+body {
+    background-image: url(../images/code-matrix.jpg);
+    background-repeat: repeat;
+    max-height: 100%;
+}
+
+#topHeader {
+    text-align: center;
+    color: white;
+}
+
+#greeting {
+    text-align: center;
+}
+
+#startQuiz {
+    text-align: center;
+}
+
+.openingBox {
+    background-color: darkgrey;
+    color: white;
+    height: 25vh;
+    margin-top: 300px;
+}
