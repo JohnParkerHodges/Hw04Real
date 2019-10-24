@@ -4,6 +4,18 @@ body {
     max-height: 100%;
 }
 
+h2 {
+    color: white;
+}
+
+label {
+    color: white;
+}
+
+li {
+    color: white;
+}
+
 #topHeader {
     text-align: center;
     color: white;
@@ -17,9 +29,32 @@ body {
     text-align: center;
 }
 
-.openingBox {
-    background-color: darkgrey;
+#currentResult {
     color: white;
-    height: 25vh;
-    margin-top: 300px;
+}
+
+#wholeGame {
+    text-align: center;
+}
+
+.openingBox {
+    color: white;
+    height: 20vh;
+    margin-top: 200px;
+}
+
+.quizGameBoxHeader {
+    color: white;
+}
+
+.HS {
+    color: white;
+}
+
+.something {
+    margin-top: 10px;
+}
+
+.btnPad {
+    padding-top: 5px;
 }

@@ -120,7 +120,8 @@ let questions = [{
         imgSrc: './assets/images/1_HP8l7LMMt7Sh5UoO1T-yLQ.png',
         choiceA: 'False',
         choiceB: 'True',
-        // TODO: add choices
+        choiceC: '&ltbody&gt',
+        choiceD: '&ltlink&gt',
         correct: 'A',
     },
     {
@@ -129,7 +130,7 @@ let questions = [{
         choiceA: 'while (i <= 10)',
         choiceB: 'while i = 1 to 10',
         choiceC: 'while (i <= 10; i++)',
-        // TODO: add choices
+        choiceD: 'For ([i] =< 10; i+-',
         correct: 'A',
     },
     {
@@ -164,7 +165,8 @@ let questions = [{
         imgSrc: './assets/images/1_HP8l7LMMt7Sh5UoO1T-yLQ.png',
         choiceA: 'False',
         choiceB: 'True',
-        // TODO: add choices
+        choiceC: 'False its jQuery',
+        choiceD: 'maybe',
         correct: 'A',
     },
     {
