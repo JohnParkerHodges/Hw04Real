@@ -35,13 +35,16 @@ function start() {
 }
 
 function renderQuestion() {
-    currentQuestionNumber > 9 && endGame();
-    const currentQuestion = questions[currentQuestionNumber];
-    questionDiv.innerHTML = currentQuestion.question;
-    choiceA.innerHTML = currentQuestion.choiceA;
-    choiceB.innerHTML = currentQuestion.choiceB;
-    choiceC.innerHTML = currentQuestion.choiceC;
-    choiceD.innerHTML = currentQuestion.choiceD;
+    if (currentQuestionNumber > 9) {
+        endGame();
+    } else {
+        const currentQuestion = questions[currentQuestionNumber];
+        questionDiv.innerHTML = currentQuestion.question;
+        choiceA.innerHTML = currentQuestion.choiceA;
+        choiceB.innerHTML = currentQuestion.choiceB;
+        choiceC.innerHTML = currentQuestion.choiceC;
+        choiceD.innerHTML = currentQuestion.choiceD;
+    }
 }
 
 function checkAnswer(choice) {
@@ -80,15 +83,38 @@ function handleHighScoreSubmit(e) {
     localStorage.setItem(intialsInput.value, score);
     endResultsDiv.classList.add('d-none');
     highScoreContentDiv.classList.remove('d-none');
-    for (let i = 0; i < localStorage.length; i++) {
+}
+
+function renderHighScores() {
+    let sortedLocalObjects = getSortedLocalStorageScores();
+
+    for (let i = 0; i < sortedLocalObjects.length; i++) {
         let li = document.createElement('li');
-        let localStorageKey = localStorage.key(i);
-        let text = document.createTextNode(`name: ${localStorageKey} score: ${localStorage.getItem(localStorageKey)}`);
+        let text = document.createTextNode(`name: ${sortedLocalObjects[i].name} score: ${sortedLocalObjects[i].score}`);
         li.appendChild(text);
         highScoreList.appendChild(li);
-
-
     }
+}
+
+function getSortedLocalStorageScores() {
+    // create empty array to hold my objects
+    let localStorageObjects = [];
+    // loop over local storage
+    for (let i = 0; i < localStorage.length; i++) {
+        //check if the value of the local storage key can be parsed into a number
+        Number(localStorage.getItem(localStorage.key(i))) &&
+            // if yes, make an object and put it into my array
+            localStorageObjects.push({
+                // key will be the name
+                name: localStorage.key(i),
+                // getItem will be the score
+                score: localStorage.getItem(localStorage.key(i))
+            })
+    }
+    // give back a sorted version (descending) of the array I built
+    return localStorageObjects.sort((a, b) => {
+        return b.score - a.score
+    })
 }
 
 let questions = [{
