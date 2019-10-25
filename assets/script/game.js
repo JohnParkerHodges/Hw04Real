@@ -83,6 +83,7 @@ function handleHighScoreSubmit(e) {
     localStorage.setItem(intialsInput.value, score);
     endResultsDiv.classList.add('d-none');
     highScoreContentDiv.classList.remove('d-none');
+    renderHighScores();
 }
 
 function renderHighScores() {
