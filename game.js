@@ -82,9 +82,12 @@ function handleHighScoreSubmit(e) {
     highScoreContentDiv.classList.remove('d-none');
     for (let i = 0; i < localStorage.length; i++) {
         let li = document.createElement('li');
-        let text = document.createTextNode(localStorage.key(i));
+        let localStorageKey = localStorage.key(i);
+        let text = document.createTextNode(`name: ${localStorageKey} score: ${localStorage.getItem(localStorageKey)}`);
         li.appendChild(text);
         highScoreList.appendChild(li);
+
+
     }
 }
 
