@@ -1,9 +1,11 @@
-# Hw04Real I wasn't ready for a quiz!!
+# I wasn't ready for a quiz!!
 This is a Basic JavaScript quiz! 
-this 
+this was built to help me better understand JS. 
 
-![image description](Hw04Real/assets/images/img1.png)
-![image description](Hw04Real/assets/images/img2.png)
-![image description]("assets/images/Screen Shot 2019-10-24 at 7.40.36 PM.png")
-![image description]("assets/images/Screen Shot 2019-10-24 at 7.40.42 PM.png")
-![image description]("assets/images/Screen Shot 2019-10-") 
+![Screen1](Hw04Real/assets/images/img1.png);
+![Screen2](Hw04Real/assets/images/img2.png);
+![Screen3](Hw04Real/assets/images/img3.png);
+![Screen4](Hw04Real/assets/images/img4.png);
+![Screen5](Hw04Real/assets/images/img5.png);
+
+![alternativetext](Hw04Real/assets/images/img1.png);
